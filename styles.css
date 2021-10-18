@@ -1,0 +1,49 @@
+body {
+  padding: 30px;
+  background-color: rgb(255, 255, 255);
+}
+
+h1 {
+  text-align: right;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+
+img {
+  width: 50px;
+}
+
+.color_section {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+
+.color_section_default {
+  background:
+      linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+      linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+      linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+}
+
+.input_color_section {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+
+.input_section {
+  text-align: center;  
+}
+
+.logo_area {
+  text-align: right;
+}
+
+.color_area {
+  padding: 70px;
+  text-align: center;
+}

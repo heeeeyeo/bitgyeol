@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="index.js"></script>
+  <title>Page Title</title>
+</head>
+<body>
+<div class="logo_area">
+  <img src ="./logo.png"></img>
+</div>
+<div class="color_area" id="color_area">
+  <div id="color_section color_section_default" style="display: inline-block; width: 200px; height: 200px;
+   background:
+      linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+      linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+      linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);">sample</div>
+</div>
+<div class="input_section">
+    <input id="koreanInput" type="text" maxlength="5" onkeyup="koreanToEnglish(this.value)" value=""><br><br>
+    <br />
+    <div id="englishOutput"></div>
+</div>
+<script>
+  var inko = new Inko();
+    function koreanToEnglish(text) {
+        document.getElementById("color_area").innerHTML = inko.ko2en(text);
+    }
+</script>
+</body>
+</html>
