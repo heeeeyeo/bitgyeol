@@ -180,14 +180,13 @@
 
     Inko.prototype.ko2en = function (input) {
         var result = '';
-        var color_arr = [];
         if (input === '' || input === undefined) return result;
         var _분리 = [-1, -1, -1, -1, -1];
-
+        
         for (var i = 0; i < input.length; i++) {
             var _한글 = input[i];
             var _코드 = _한글.charCodeAt();
-
+            
             // 가 ~ 힣 사이에 있는 한글이라면
             if ((_코드 >= 가 && _코드 <= 힣) || (_코드 >= ㄱ && _코드 <= ㅣ)) {
                 _분리 = this.한글분리(_한글);
@@ -198,14 +197,14 @@
                 // 분리 배열 초기화
                 _분리 = [-1, -1, -1, -1, -1];
             }
-            console.log(_분리);
 
+            var color_arr = [];
             result += '<div class="color_section input_color_section" style="background: linear-gradient(';
-            for (var i = 0; i < _분리.length; i++) {
-                if (_분리[i] === '' || _분리[i] === -1 || _분리[i] === undefined) {
+            for (var j = 0; j < _분리.length; j++) {
+                if (_분리[j] === '' || _분리[j] === -1 || _분리[j] === undefined) {
 
                 } else {
-                    color_arr.push(_분리[i]); 
+                    color_arr.push(_분리[j]); 
                 }
 
             }
