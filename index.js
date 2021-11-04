@@ -208,10 +208,10 @@
                 }
 
             }
-            console.log(color_arr);
             result += color_arr;
             result += ');"></div>';
         }
+        console.log(result);
         return result;
     }
 
