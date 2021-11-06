@@ -21,11 +21,11 @@
     var ㄱ = 12593;
     var ㅣ = 12643;
 
-    // var 영어index = (function (en) {
-    //     var x = {};
-    //     for (var i = 0; i < en.length; ++i) x[en[i]] = i;
-    //     return x;
-    // }(영어));
+    var 영어index = (function (en) {
+        var x = {};
+        for (var i = 0; i < en.length; ++i) x[en[i]] = i;
+        return x;
+    }(영어));
 
     var 한글index = (function (kr) {
         var x = {};
@@ -198,21 +198,73 @@
                 _분리 = [-1, -1, -1, -1, -1];
             }
 
-            var color_arr = [];
-            result += '<div class="color_section input_color_section" style="background: linear-gradient(';
-            for (var j = 0; j < _분리.length; j++) {
-                if (_분리[j] === '' || _분리[j] === -1 || _분리[j] === undefined) {
-
-                } else {
-                    color_arr.push(_분리[j]); 
-                }
-
-            }
-            result += color_arr;
-            result += ');"></div>';
+            result += this.makediv(_분리);
         }
-        console.log(result);
         return result;
+    }
+    
+    Inko.prototype.makediv = function(_분리) {
+        var color_arr = [];
+        var result = '';
+        var count = 0;
+        for (var j = 0; j < _분리.length; j++) {
+            if (_분리[j] === '' || _분리[j] === -1 || _분리[j] === undefined) {
+            } else {count = count + 1; color_arr.push(_분리[j]); }
+        }
+        console.log(count);
+        switch (count) {
+            case 1:
+                
+                break;
+        
+            case 2:
+                result += '<div class="color_section input_color_section" style="background: linear-gradient(';
+                if(_분리[1] === 영어[한글.indexOf("ㅏ")]||
+                    _분리[1] === 영어[한글.indexOf("ㅐ")]||
+                    _분리[1] === 영어[한글.indexOf("ㅑ")]||
+                    _분리[1] === 영어[한글.indexOf("ㅒ")]||
+                    _분리[1] === 영어[한글.indexOf("ㅓ")]||
+                    _분리[1] === 영어[한글.indexOf("ㅔ")]||
+                    _분리[1] === 영어[한글.indexOf("ㅕ")]||
+                    _분리[1] === 영어[한글.indexOf("ㅖ")]||
+                    _분리[1] === 영어[한글.indexOf("ㅣ")]){
+                    result += ' to right, ';
+                } else if (_분리[1] === 영어[한글.indexOf("ㅗ")]||
+                    _분리[1] === 영어[한글.indexOf("ㅛ")]||
+                    _분리[1] === 영어[한글.indexOf("ㅜ")]||
+                    _분리[1] === 영어[한글.indexOf("ㅠ")]||
+                    _분리[1] === 영어[한글.indexOf("ㅡ")]){
+                        result += '';
+                }
+                console.log(_분리[1] , 영어[한글.indexOf("ㅏ")]);
+        
+                result += color_arr;
+                result += ');"></div>';  
+                
+                break;
+        
+            case 3:
+                result += '<div class="color_section input_color_section" style="background: linear-gradient(120deg,';
+                result += color_arr[0];
+                result += ', rgba(255,0,0,0) 70.71%),linear-gradient(240deg,';  
+                result += color_arr[1];
+                result += ', rgba(255,0,0,0) 70.71%),linear-gradient(360deg,';  
+                result += color_arr[2];
+                result += ', rgba(255,0,0,0) 70.71%);"></div>';  
+                break;
+        
+            case 4:
+                
+                break;
+        
+            case 5:
+                
+                break;
+        
+            default:
+                break;
+        }
+        return result;      
     }
 
     // 초성, 중성, 종성의 charCode를 받아서 합친 한글의 charCode를 반환함
