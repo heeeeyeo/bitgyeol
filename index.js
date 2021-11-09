@@ -247,8 +247,8 @@
                 break;
         
             case 3:
-                if (_분리[2] === '' || _분리[2] === -1 || _분리[2] === undefined) {
-                    if(_분리[1] === 영어[한글.indexOf("ㅏ")]||
+                if (_분리[2] === '' || _분리[2] === -1 || _분리[2] === undefined) { //복모음이 아닌경우
+                    if(_분리[1] === 영어[한글.indexOf("ㅏ")]||  //세로모음구분
                         _분리[1] === 영어[한글.indexOf("ㅐ")]||
                         _분리[1] === 영어[한글.indexOf("ㅑ")]||
                         _분리[1] === 영어[한글.indexOf("ㅒ")]||
@@ -264,7 +264,7 @@
                             result += ', rgba(255,0,0,0) 70.71%),linear-gradient(360deg,';  
                             result += color_arr[2];
                             result += ', rgba(255,0,0,0) 70.71%);"></div>';  
-                    } else if (_분리[1] === 영어[한글.indexOf("ㅗ")]||
+                    } else if (_분리[1] === 영어[한글.indexOf("ㅗ")]||  //가로모음구분
                         _분리[1] === 영어[한글.indexOf("ㅛ")]||
                         _분리[1] === 영어[한글.indexOf("ㅜ")]||
                         _분리[1] === 영어[한글.indexOf("ㅠ")]||
@@ -273,13 +273,13 @@
                             result += color_arr;
                             result += ');"></div>';  
                     }
-                } else {
+                } else {    //복모음인경우 색배치 순서 변경
                     result += '<div class="color_section input_color_section" style="background: linear-gradient(120deg,';
                     result += color_arr[0];
-                    result += ', rgba(255,0,0,0) 70.71%),linear-gradient(360deg,';  
-                    result += color_arr[1];
                     result += ', rgba(255,0,0,0) 70.71%),linear-gradient(240deg,';  
                     result += color_arr[2];
+                    result += ', rgba(255,0,0,0) 70.71%),linear-gradient(360deg,';  
+                    result += color_arr[1];
                     result += ', rgba(255,0,0,0) 70.71%);"></div>';                      
                 }
 

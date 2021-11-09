@@ -24,12 +24,9 @@ img {
 
 .color_section_default {
   background:
-      linear-gradient(120deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-      linear-gradient(240deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-      linear-gradient(360deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
-      /* linear-gradient(120deg, #ffffff, rgba(255,0,0,0) 70.71%),
-      linear-gradient(240deg, #bb9e8b, rgba(255,0,0,0) 70.71%),
-      linear-gradient(360deg, #f15b5b, rgba(255,0,0,0) 70.71%); */
+      linear-gradient(120deg, #db4e9c, rgba(255,0,0,0) 70.71%),
+      linear-gradient(240deg, #b9cf50, rgba(255,0,0,0) 70.71%),
+      linear-gradient(360deg, #f15b5b, rgba(255,0,0,0) 70.71%);
 }
 
 .input_color_section {
@@ -61,3 +58,20 @@ input[type=text], select {
   box-sizing: border-box;
   font-size: 30px;
 }
+
+.body_wrapper { 
+  position: relative; 
+} 
+
+.body_content {
+  padding-bottom: 50px;
+} 
+.footer {
+  width:100%;
+  height:50px;
+  position:fixed;
+  bottom:0;
+  font-size: 20px;
+  /* text-align: center; */
+}
+
