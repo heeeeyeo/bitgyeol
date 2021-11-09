@@ -13,13 +13,13 @@ p {
 }
 
 img {
-  width: 50px;
+  width: 100px;
 }
 
 .color_section {
   display: inline-block;
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 350px;
 }
 
 .color_section_default {
@@ -34,8 +34,8 @@ img {
 
 .input_color_section {
   display: inline-block;
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 350px;
 }
 
 .input_section {
@@ -47,6 +47,17 @@ img {
 }
 
 .color_area {
-  padding: 70px;
+  padding: 180px;
   text-align: center;
+}
+
+input[type=text], select {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 20px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 30px;
 }

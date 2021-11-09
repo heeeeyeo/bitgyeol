@@ -214,6 +214,9 @@
         console.log(count);
         switch (count) {
             case 1:
+                result += '<div class="color_section input_color_section" style="background: ';
+                result += color_arr;
+                result += ';"></div>';  
                 
                 break;
         
@@ -244,21 +247,68 @@
                 break;
         
             case 3:
-                result += '<div class="color_section input_color_section" style="background: linear-gradient(120deg,';
-                result += color_arr[0];
-                result += ', rgba(255,0,0,0) 70.71%),linear-gradient(240deg,';  
-                result += color_arr[1];
-                result += ', rgba(255,0,0,0) 70.71%),linear-gradient(360deg,';  
-                result += color_arr[2];
-                result += ', rgba(255,0,0,0) 70.71%);"></div>';  
+                if (_분리[2] === '' || _분리[2] === -1 || _분리[2] === undefined) {
+                    if(_분리[1] === 영어[한글.indexOf("ㅏ")]||
+                        _분리[1] === 영어[한글.indexOf("ㅐ")]||
+                        _분리[1] === 영어[한글.indexOf("ㅑ")]||
+                        _분리[1] === 영어[한글.indexOf("ㅒ")]||
+                        _분리[1] === 영어[한글.indexOf("ㅓ")]||
+                        _분리[1] === 영어[한글.indexOf("ㅔ")]||
+                        _분리[1] === 영어[한글.indexOf("ㅕ")]||
+                        _분리[1] === 영어[한글.indexOf("ㅖ")]||
+                        _분리[1] === 영어[한글.indexOf("ㅣ")]){
+                            result += '<div class="color_section input_color_section" style="background: linear-gradient(120deg,';
+                            result += color_arr[0];
+                            result += ', rgba(255,0,0,0) 70.71%),linear-gradient(240deg,';  
+                            result += color_arr[1];
+                            result += ', rgba(255,0,0,0) 70.71%),linear-gradient(360deg,';  
+                            result += color_arr[2];
+                            result += ', rgba(255,0,0,0) 70.71%);"></div>';  
+                    } else if (_분리[1] === 영어[한글.indexOf("ㅗ")]||
+                        _분리[1] === 영어[한글.indexOf("ㅛ")]||
+                        _분리[1] === 영어[한글.indexOf("ㅜ")]||
+                        _분리[1] === 영어[한글.indexOf("ㅠ")]||
+                        _분리[1] === 영어[한글.indexOf("ㅡ")]){
+                            result += '<div class="color_section input_color_section" style="background: linear-gradient(';
+                            result += color_arr;
+                            result += ');"></div>';  
+                    }
+                } else {
+                    result += '<div class="color_section input_color_section" style="background: linear-gradient(120deg,';
+                    result += color_arr[0];
+                    result += ', rgba(255,0,0,0) 70.71%),linear-gradient(360deg,';  
+                    result += color_arr[1];
+                    result += ', rgba(255,0,0,0) 70.71%),linear-gradient(240deg,';  
+                    result += color_arr[2];
+                    result += ', rgba(255,0,0,0) 70.71%);"></div>';                      
+                }
+
                 break;
         
             case 4:
-                
+                result += '<div class="color_section input_color_section" style="background: linear-gradient(135deg,';
+                result += color_arr[0];
+                result += ', rgba(255,0,0,0) 70.71%),linear-gradient(225deg,';  
+                result += color_arr[1];
+                result += ', rgba(255,0,0,0) 70.71%),linear-gradient(315deg,';  
+                result += color_arr[2];
+                result += ', rgba(255,0,0,0) 70.71%),linear-gradient(405deg,';  
+                result += color_arr[3];
+                result += ', rgba(255,0,0,0) 70.71%);"></div>';  
                 break;
         
             case 5:
-                
+                result += '<div class="color_section input_color_section" style="background: linear-gradient(144deg,';
+                result += color_arr[0];
+                result += ', rgba(255,0,0,0) 70.71%),linear-gradient(216deg,';  
+                result += color_arr[1];
+                result += ', rgba(255,0,0,0) 70.71%),linear-gradient(288deg,';  
+                result += color_arr[2];
+                result += ', rgba(255,0,0,0) 70.71%),linear-gradient(360deg,';  
+                result += color_arr[3];
+                result += ', rgba(255,0,0,0) 70.71%),linear-gradient(432deg,';  
+                result += color_arr[4];
+                result += ', rgba(255,0,0,0) 70.71%);"></div>';                  
                 break;
         
             default:
