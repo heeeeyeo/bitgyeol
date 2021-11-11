@@ -44,7 +44,7 @@ img {
 }
 
 .color_area {
-  padding: 180px;
+  padding: 80px;
   text-align: center;
 }
 
@@ -71,7 +71,7 @@ input[type=text], select {
   height:50px;
   position:fixed;
   bottom:0;
-  font-size: 20px;
+  font-size: 15px;
   /* text-align: center; */
 }
 
