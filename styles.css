@@ -44,7 +44,7 @@ p {
 }
 
 .logo_area {
-  text-align: right;
+  float: right;
 }
 
 .color_area {
