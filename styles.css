@@ -12,8 +12,12 @@ p {
   font-size: 20px;
 }
 
-img {
+.logo_img {
   width: 100px;
+}
+
+.info_img {
+  width: 50%;
 }
 
 .color_section {
@@ -44,7 +48,7 @@ img {
 }
 
 .color_area {
-  padding: 80px;
+  padding-bottom: 30px;
   text-align: center;
 }
 
@@ -65,6 +69,7 @@ input[type=text], select {
 
 .body_content {
   padding-bottom: 50px;
+  text-align: center;
 } 
 .footer {
   width:100%;
