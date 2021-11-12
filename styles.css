@@ -26,6 +26,12 @@ p {
   height: 350px;
 }
 
+.info_img_section {
+  text-align: center;  
+  padding-top: 150px;
+  padding-left: 100px;
+}
+
 .color_section_default {
   background:
       linear-gradient(120deg, #db4e9c, rgba(255,0,0,0) 70.71%),
